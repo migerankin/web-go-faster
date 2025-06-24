@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Web Go Faster",
+    "version": "1.0",
+    "description": "Ctrl+Space 呼出输入框，搜索书签栏，快捷跳转网页",
+    "permissions": [
+        "bookmarks",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+} 
